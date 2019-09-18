@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  hugo:
+    container_name: hugo
+    build:
+      context: .
+      dockerfile: hugo.dockerfile
+    ports:
+      - 1313:1313
+    tty: true
+    volumes:
+      - ./hugo:/hugo

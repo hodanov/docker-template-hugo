@@ -1,0 +1,6 @@
+languageCode = "ja"
+theme = "ananke"
+title = "ゴリラ.vim（仮"
+
+[params]
+  commentoEnable = true
