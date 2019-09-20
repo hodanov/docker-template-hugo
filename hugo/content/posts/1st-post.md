@@ -2,7 +2,7 @@
 title: "ウッホホーイ"
 date: 2019-09-20T00:30:29Z
 draft: false
-description = "ウッホホーイ！HUGOで作ったブログの初投稿記事だよ！やったね！"
+description: "ウッホホーイ！HUGOで作ったブログの初投稿記事だよ！やったね！"
 categories:
   - "example"
   - "test"
