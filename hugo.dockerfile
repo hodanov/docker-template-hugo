@@ -15,3 +15,5 @@ RUN apt-get update \
     && apt-get remove -y wget \
     && apt-get autoremove -y \
     && rm -rf /var/lib/apt/lists/* \
+ADD ./hugo/* /hugo/
+CMD hugo server -D --bind="0.0.0.0"
