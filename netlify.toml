@@ -1,0 +1,3 @@
+[build]
+publish = "./hugo/public"
+command = "hugo -s ./hugo"
