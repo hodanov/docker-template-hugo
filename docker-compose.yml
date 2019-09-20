@@ -1,8 +1,8 @@
 version: '3'
 
 services:
-  hugo:
-    container_name: hugo
+  hugo_app:
+    container_name: hugo_app
     build:
       context: .
       dockerfile: hugo.dockerfile
