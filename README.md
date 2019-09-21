@@ -1,55 +1,51 @@
-# ゴリラ.vimのブログ
+# docker-template-hugo
 
-ゴリラ.vimのブログの雛形です！
+This is the HUGO template on docker.
 
-# 起動条件
+# Requirements
 
-ローカルで確認する場合は`docker`と`docker compose`、または`HUGO`が必要です。
+The app requires the following to run:
 
 - Docker
 - Docker Compose
-- HUGO
 
-# ローカルでの起動方法
+# Getting Started
 
-ローカルで起動するにはリポジトリをクローンする必要がありますが、  
-gitのsubmoduleが含まれているので、下記のコマンドでクローンします。
+To use the app, clone the repo.  
+However, since it contains git-submodule, need to clone it with the following command:
 
 ```
 git clone --recursive git@github.com:gorilla-vim/gorilla.vim-blog.git
 ```
 
-すでに通常のコマンドでクローンしてしまった場合は下記のコマンドでsubmoduleを更新します。
+If you have already cloned with the normal command, update the submodule with the following command:
 
 ```
 git submodule init
 git submodule update
 ```
 
-## docker composeで起動する場合
-
-クローンしたリポジトリのディレクトリへ移動し、`docker compose up`します。
+Next, execute `docker compose up`.
 
 ```
-cd gorilla.vim-blog
+cd docker-template-hugo
 docker-compose up -d
 ```
 
-コンテナ起動後、`localhost:1313`へアクセスすることでブログを閲覧できます。
+After launching containers, access the `localhost:1313`.  
+The HUGO blog will be shown.
 
-# 記事の書き方
+# Deploy to production
 
-整理中
+## When using Netlify
 
-# 本番へのデプロイ
+Netlify build commands and public directory are set in `netlify.toml` like a below.
 
-Netlifyで公開します。（netlifyのアカウントをどうするかは要相談）
-
-developブランチまたはfeatureブランチを切って記事を書き、masterへのプルリク時にNetlify側でCIが走ります。
-
-エラーがでなければ、マージ後に自動でデプロイされます。
-
-Netlifyのビルド時のコマンドと公開ディレクトリは`netlify.toml`にて設定。
+```
+[build]
+publish = "./hugo/public"
+command = "hugo -s ./hugo"
+```
 
 # Author
 
