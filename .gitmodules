@@ -1,3 +1,6 @@
 [submodule "hugo/themes/ananke"]
 	path = hugo/themes/ananke
 	url = https://github.com/budparr/gohugo-theme-ananke.git
+[submodule "hugo/themes/meghna-hugo"]
+	path = hugo/themes/meghna-hugo
+	url = git@github.com:hodanov/docker-template-hugo.git
