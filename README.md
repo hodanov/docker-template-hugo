@@ -15,7 +15,7 @@ To use the app, clone the repo.
 However, since it contains git-submodule, need to clone it with the following command:
 
 ```
-git clone --recursive git@github.com:gorilla-vim/gorilla.vim-blog.git
+git clone --recursive git@github.com:hodanov/docker-template-hugo.git
 ```
 
 If you have already cloned with the normal command, update the submodule with the following command:
