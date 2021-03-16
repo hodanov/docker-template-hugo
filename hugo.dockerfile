@@ -1,6 +1,6 @@
 FROM debian:10-slim
 
-ENV HUGO_VERSION='0.67.0'
+ENV HUGO_VERSION='0.81.0'
 ENV HUGO_NAME="hugo_extended_${HUGO_VERSION}_Linux-64bit"
 ENV HUGO_URL="https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/${HUGO_NAME}.tar.gz"
 WORKDIR /hugo
@@ -15,5 +15,5 @@ RUN apt-get update \
     && apt-get remove -y wget \
     && apt-get autoremove -y \
     && rm -rf /var/lib/apt/lists/* \
-ADD ./hugo/* /hugo/
+COPY ./hugo/* /hugo/
 CMD hugo server -D --bind="0.0.0.0"
