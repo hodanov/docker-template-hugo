@@ -11,7 +11,7 @@ The app requires the following to run:
 
 # Getting Started
 
-To use the app, clone the repo.  
+To use the app, clone the repo.
 However, since it contains git-submodule, need to clone it with the following command:
 
 ```
@@ -32,7 +32,7 @@ cd docker-template-hugo
 docker-compose up -d
 ```
 
-After launching containers, access the `localhost:1313`.  
+After launching containers, access the `localhost:1313`.
 The HUGO blog will be shown.
 
 # Deploy to production
@@ -43,8 +43,9 @@ Netlify build commands and public directory are set in `netlify.toml` like a bel
 
 ```
 [build]
-publish = "./hugo/public"
-command = "hugo -s ./hugo"
+base = "./hugo/"
+publish = "./public/"
+command = "hugo --gc --minify"
 ```
 
 # Author
